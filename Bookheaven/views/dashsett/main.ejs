@@ -1,0 +1,22 @@
+<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/public/WS/css/main.css">
+<script src="/public/WS/js/books.js"></script>
+<div class="container" style="flex-wrap: wrap;max-width:100%;">
+<%for(i=0;i<database.length;i++){%>
+  <div class="card" id="item">
+    <img class="card-img-top" src=<%=database[i].Image%>>
+ <div class="card-body">
+  <h4 class="card-title"><%=database[i].Name.toString()%></h4>
+  <div class="card-text">
+    Author:<%=database[i].Author.toString()%>
+  </br>
+  Rate:0
+</br>
+<a href="#"  class="btn btn-primary" onclick="datasend(this.text)" style="position:relative;left:2px"><p  style="display:none;"><%=database[i].Name.toString()%></p>Details</a>
+</div>
+</div>
+</div>
+<%}%> 
+</div>
+<script src="/public/js/jquery.js"></script>
+<script src="/public/js/bootstrap.min.js"></script>

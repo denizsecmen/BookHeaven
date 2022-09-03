@@ -1,0 +1,10 @@
+#mycom
+{
+    height: 670px;
+    width:  90%;
+    position: relative;
+    left: 5%;
+    overflow: scroll;
+    border:0.2px solid lightgray;
+    border-radius: 5px;
+}

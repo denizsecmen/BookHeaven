@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookpage</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/WS/css/detail.css">
+</head>
+<body>
+    <div id="Nicko" style="display:hidden;"><%=usr%></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li style="font-size:18px;color:white;position:relative;margin-top:2%;margin-right: 20px;">
+                        Book Heaven
+                    <li>
+                        <a href="/">Main Screen</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/singup">Sing Up</a>
+                    </li>
+                    <li>
+                        <a href="/login">Log In</a>
+                    </li>
+                    <li>
+                        <a href="/new">What's New</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   <div id="comments">
+    <div>
+    <div class="form-group">
+     <label for="exampleFormControlTextarea1">Enter comment:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group" style="border:0.2 solid ligthgray;float: right;">
+    <button id="click" type="button" onClick="merhaba()" class="btn btn-primary">Send</button>
+    <button id="click"  onClick="reset()" class="btn btn-primary">Reset</button>
+</div>
+</div>
+   </div>
+   <div id="detail">
+    <div id="dp">
+    <img style="height:150px;width:180px;margin-left:50px;text-align: center;border:0.2px solid rgb(213, 209, 209);border-radius: 4px;margin-top: 10px;" src=<%=data.Image%>>
+    </br>
+</br>
+        Book Name:<div id="test"><%=data.Name%></div>
+        Author:<%=data.Author%>
+    </br>
+        Page Number:<%=data.Page_Number%>
+    </br>
+        Avaible language:<%=data.Avalang%>
+</br>
+        Uploader Name:<%=data.Loader_Nick%>
+</br>
+        Description:<%=data.Desp%>
+    </div>
+    </div>
+    <div id="loader" style="border:0.2px solid lightgray;">
+        <%for(var i=0;i<com.length;i++){%>
+        <div class="comm" style="border-bottom:1px solid black;padding:3px;">
+            <b><%=com[i].Nick%>:</b>
+            <p><%=com[i].Comment%></p>
+            <div style="text-align: rigth;"><%=com[i].Date%></div>
+        </div>
+        <%}%> 
+    </div>
+<script src="/public/WS/js/comment.js"></script>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script>
+
+    function merhaba(){
+        if(document.getElementById("Nicko").innerHTML=="")
+        {
+          alert("You must to log in for making comment!")
+        }
+        else{
+        alert(document.getElementById('test').innerHTML);
+        alert(document.getElementById("exampleFormControlTextarea1").value.toString());
+        $.ajax(
+        {   
+            url : "/adcom",
+            type : "POST",
+            async : false,
+            datatype : 'json',
+            data:{Nick:document.getElementById('test').innerHTML,Comment:document.getElementById("exampleFormControlTextarea1").value.toString()},
+            success:function(data)
+            {
+                if(data=="Denied")
+                alert("Comment Sended!");
+            }
+        }
+    );
+        }
+    }
+</script>

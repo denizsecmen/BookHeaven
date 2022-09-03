@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/WS/css/dashboard.css"> 
+    <link rel="stylesheet" href="/public/WS/css/mycom.css">
+    <script src="https://kit.fontawesome.com/75b9cd586e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="mycom">
+        <%for(var i=0;i<datab.length;i++){%>
+            <div class="comm" style="border-bottom:0.2px solid black;padding:3px;">
+                <b><%=datab[i].Nick%>:</b>
+                <p><%=datab[i].Comment%></p>
+                <div style="text-align: rigth;"><%=datab[i].Date%></div>
+            </div>
+            <%}%> 
+        </div> 
+    </div>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>

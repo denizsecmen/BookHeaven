@@ -1,0 +1,25 @@
+#mu
+{
+    position: absolute;
+    float: right;
+    width: 29%;
+    height: 92%;
+    left: 70%;
+    top:7%;
+}
+#screen
+{
+    width: 65%!important;
+    height: 92%!important;
+    top:7%;
+}
+#propic{
+    position: relative;
+    margin-left: 35%;
+    width: 30%;
+    height: 20%;
+    border-radius: 4%;
+}
+nav{
+    padding: 0px;
+}

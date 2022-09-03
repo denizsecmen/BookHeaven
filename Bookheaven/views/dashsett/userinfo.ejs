@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/WS/css/dashboard.css"> 
+    <script src="https://kit.fontawesome.com/75b9cd586e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="form">
+        <div class="form-group">
+          <label for="book">Nickname:</label>
+          <input type="text" class="form-control" id="book" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="auth">Email:</label>
+          <input type="text" class="form-control" id="auth" placeholder="Enter name of author">
+        </div>
+        <div class="form-group" style="border:0px;">
+          <label for="image">Profile picture:</label>
+          <input type="file" class="form-control" id="image" value="Select file">
+        </div>
+        <button type="submit" onclick="send()" class="btn btn-primary">Update</button>
+        </div>
+      </form>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/WS/js/userset.js"></script>
+</body>
+</html>

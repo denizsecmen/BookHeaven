@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/WS/css/dashboard.css"> 
+    <link rel="stylesheet" href="/public/WS/css/libary.css">
+    <script src="https://kit.fontawesome.com/75b9cd586e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" style="flex-wrap: wrap;max-width:100%;">
+        <%for(i=0;i<datab.length;i++){%>
+            <div class="card" id="item">
+              <img class="card-img-top" src=<%=datab[i].Image%>>
+           <div class="card-body">
+            <h4 class="card-title"><%=datab[i].Name.toString()%></h4>
+            <div class="card-text">
+              Author:<%=datab[i].Author.toString()%>
+            </br>
+            Rate:0
+          </br>
+          <a href="#"  class="btn btn-primary" onclick="datasend(this.text)" style="position:relative;left:2px"><p  style="display:none;"><%=datab[i].Name.toString()%></p>Details</a>
+          </div>
+          </div>
+          </div>
+          <%}%> 
+    </div>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>

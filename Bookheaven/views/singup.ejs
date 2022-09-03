@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Book Heaven</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/WS/css/index-style.css"> 
+    <style>
+    body {
+        padding-top: 70px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li style="font-size:18px;color:white;position:relative;margin-top:2%;margin-right: 20px;">
+                        Book Heaven
+                    </li>
+                    <li>
+                        <a href="/">Main Screen</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/singup">Sing Up</a>
+                    </li>
+                    <li>
+                        <a href="/login">Log In</a>
+                    </li>
+                    <li>
+                        <a href="/new">What's New</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+        <div class="col-md" style="left:50%;width:30%;">
+            <form >
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nickname:</label>
+                  <input type="text" class="form-control" id="nick" aria-describedby="emailHelp" placeholder="Nickname">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">E-post:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Epost">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password:</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password Again:</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                  </div>
+                <button id="sing" onClick="singu()" class="btn btn-primary">Sing Up</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="/public/js/singup.js"></script>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

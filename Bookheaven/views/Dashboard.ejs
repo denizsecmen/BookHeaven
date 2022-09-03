@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Book Heaven</title>
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/WS/css/dashboard.css"> 
+    <script src="https://kit.fontawesome.com/75b9cd586e.js" crossorigin="anonymous"></script>
+    <script src="/public/js/dashboard.js"></script>
+    <style>
+    body {
+        padding-top: 70px;
+    }
+    </style>
+</head>
+<body onload="contents()">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li style="font-size:18px;color:white;position:relative;margin-top:2%;margin-right: 20px;">
+                        Book Heaven
+                    </li>
+                    <li>
+                        <a href="/">Main Screen</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/singup">Sing Up</a>
+                    </li>
+                    <li>
+                        <a href="/login">Log In</a>
+                    </li>
+                    <li>
+                        <a href="/new">What's New</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="mu">
+        <img id="propic" src="/public/profilep/t.jfif">
+        <pre>Nickname:<%=user%>                Rate:<%=rates%>   <div style="float:right">Books:<%=book%></div></pre>
+    <div id="u" class="list-group">
+         <a href="/Dashboard" id="Main"  class="list-group-item list-group-item-secondary"> <i class="fa-solid fa-house"></i>   Main Screen</a>
+         <a href="/book" id="Book"  class="list-group-item list-group-item-secondary"><span class="glyphicon glyphicon-book"></span>  Add Book</a>
+         <a href="/comm" id="Comm"  class="list-group-item list-group-item-secondary"><span class="fa fa-comment"></span>   Comments</a>
+         <a href="/lib" class="list-group-item list-group-item-secondary"><i class="fas fa-bars"></i>  Added books</a>
+         <a href="/info" class="list-group-item list-group-item-secondary"><i class="fa fa-user"></i>  User Info</a>
+         <a href="/exit" class="list-group-item list-group-item-secondary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+</div>
+    <div id="screen" style="position:relative;left:1%;max-width: 100%;">
+        <%-include(Loader,{database:datab})%> 
+    </div>
+    <script src="/public/js/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</body>
+
+</html>
