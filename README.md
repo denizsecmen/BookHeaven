@@ -8,7 +8,7 @@ At BookHeaven you can:
 - Add your books.
 - Make comments to other books
 - Can see your added books and comments at your profile page.
-## Languages and frameworks used during Developing
+## Languages and Frameworks Used During Developing
 - Database:
   - MYSQL
 - Backend:
